@@ -16,4 +16,24 @@
 # 220 284
 # 284 220
 
-# TODO: your code here
+def get_dividers_sum(number):
+    sum = 0
+    i = number - 1
+    while i > 0:
+        if number % i == 0:
+            sum = sum + i
+        i -= 1
+    return sum
+
+number = int(input())
+
+i = 1
+while i < number:
+    j = i + 1
+    while j < number:
+        i_sum = get_dividers_sum(i)
+        j_sum = get_dividers_sum(j)
+        if i == j_sum and j == i_sum:
+            print(i, j)
+        j += 1
+    i += 1
