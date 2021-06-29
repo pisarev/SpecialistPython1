@@ -7,3 +7,11 @@
 # Формат выходных данных: Необходимо вывести сумму чисел написанных на кирпичах.
 
 # TODO: your code here
+
+level = int(input())
+count = 0
+i = 1
+while i <= level:
+    count += i * i
+    i += 1
+print(count)
