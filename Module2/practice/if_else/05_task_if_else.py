@@ -3,4 +3,7 @@
 # Формат входных данных: дано целое число m (1 ≤ m ≤ 12).
 # Формат выходных данных: требуется вывести название времени года
 
-# TODO: your code here
+season_name = ["Зима", "Весна", "Лето", "Осень"]
+month_name = [0, 0, 1, 1, 1, 2, 2, 2, 3, 3, 3, 0]
+month_index = int(input())
+print(season_name[month_name[month_index - 1]])
