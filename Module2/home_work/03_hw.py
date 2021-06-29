@@ -28,4 +28,10 @@
 # 19 189.81 Rub.
 # 20 199.80 Rub.
 
-# TODO: your code here
+x_cost = float(input())
+print("Входные данные\n# {:.2f}".format(x_cost) + "\nВыходные данные")
+
+i = 0
+while i < 20:
+    print("#{:d} {:.2f}".format(i + 1, x_cost * (i + 1)))
+    i += 1
