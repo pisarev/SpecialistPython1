@@ -7,4 +7,8 @@
 # коров, корова или коровы
 # Например, 1 корова, 2 коровы, 5 коров, 125 коров.
 
-# TODO: your code here
+cow_name = ["корова", "коровы", "коров"]
+cow_index = [2, 0, 1, 1, 1, 2, 2, 2, 2, 2]
+
+n = int(input())
+print(n, cow_name[2] if n > 9 else cow_name[cow_index[n % 10]])
