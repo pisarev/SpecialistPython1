@@ -16,5 +16,20 @@
  #
 # #
 
+import math
+length = int(input())
+matrix = [[" " for j in range(length)] for i in range(length)]
 
-# TODO: your code here
+x = 0
+y = 0
+while x < length:
+    y = 0
+    while y < length:
+        if x == y or length - 1 - x == y:
+            matrix[x][y] = "#"
+        else:
+            matrix[x][y] = " "
+        y += 1
+    x += 1
+for char in matrix:
+    print(char)
