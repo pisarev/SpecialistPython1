@@ -9,4 +9,10 @@
 # 123
 # 1234
 
-# TODO: your code here
+number = int(input())
+i = 1
+text = ""
+while i <= number:
+    text = text + str(i)
+    print(text)
+    i += 1
