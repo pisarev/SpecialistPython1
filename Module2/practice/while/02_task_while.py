@@ -2,4 +2,10 @@
 # Т.е. программа запрашивает ввод, если вводится любое значение отличное от слова “хватит”,
 # то программа запрашивает ввод снова.
 
-# TODO: your code here
+text = ""
+while True:
+    string = input()
+    if string == "хватит":
+        break
+    text += string
+    print(text)
