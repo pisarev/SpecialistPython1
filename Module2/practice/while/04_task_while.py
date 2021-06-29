@@ -7,3 +7,19 @@
 # Формат выходных данных: Необходимо вывести сумму чисел написанных на кирпичах.
 
 # TODO: your code here
+
+def get_count(level):
+    i = 1
+    count = 0
+    while i <= level:
+        count += level
+        i += 1
+    return count
+
+level = int(input())
+count = 0
+i = 1
+while i <= level:
+    count += get_count(i)
+    i += 1
+print(count)
