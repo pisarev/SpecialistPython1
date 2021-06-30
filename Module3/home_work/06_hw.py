@@ -32,14 +32,50 @@ items = [
     },
 ]
 # Найдите:
-print("Товары на складе представлены брэндами: ")
+brand_list = [];
+for item in items:
+    for key, value in item.items():
+        if key == "brand": brand_list.append(value)
+print("Товары на складе представлены брэндами:", brand_list)
 
-# TODO: your code here
+brand_info = {
+    "brand": [],
+    "count": []
+}
 
-print("На складе больше всего товаров брэнда(ов): ")
+def find_brand(brand_name):
+    for i, item in enumerate(brand_info["brand"]):
+        if item == brand_name:
+            return i
+    return -1
+    
+for item in items:
+    i = find_brand(item["brand"])
+    if i == -1:
+        brand_info["brand"].append(item["brand"])
+        brand_info["count"].append(1)
+    else:
+        brand_info["count"][i] += 1
+        
+brand_index = -1
+brand_count = 0
+for i, count in enumerate(brand_info["count"]):
+    if brand_index < 0 or brand_count < count:
+        brand_index = i
+        brand_count = count
 
-# TODO: your code here
+#print(brand_info)
 
-print("На складе самый дорогой товар брэнда(ов): ")
+if brand_index != -1:
+    print("На складе больше всего товаров брэнда(ов):", brand_info["brand"][brand_index])
+            
+item_index = -1
+item_price = 0
 
-# TODO: your code here
+for i, item in enumerate(items):
+    price = items[i]["price"]
+    if item_index < 0 or item_price < price:
+        item_index = i
+        item_price = price
+if item_index != -1:
+    print("На складе самый дорогой товар брэнда(ов):", items[item_index]["brand"])
