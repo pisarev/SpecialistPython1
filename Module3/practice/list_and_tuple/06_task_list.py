@@ -4,4 +4,8 @@
 first_number = int(input())     # Первое число
 second_number = int(input())    # Второе число
 
-# TODO: your code here
+i = first_number
+while i <= second_number:
+    if i % 3 == 0:
+        print(i)
+    i += 1
