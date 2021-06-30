@@ -4,5 +4,10 @@
 
 # Пример строки перевертыша: "И темен город. Мороз узором дорог не мети."
 
-# TODO: your code here
-
+s = input()
+s = s.replace(" ", "").replace(".", "").replace(",", "").lower()
+s_inverse = s[::-1]
+if s == s_inverse:
+    print("Перевертыш")
+else:
+    print("Не перевертыш")
